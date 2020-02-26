@@ -1,10 +1,15 @@
 {
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "react-app",
     "airbnb-typescript",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["jest"],
   "env": {
     "jest/globals": true
   },
@@ -15,5 +20,16 @@
         "@typescript-eslint/explicit-function-return-type": 0
       }
     }
-  ]
+  ],
+
+  "rules": {
+    "no-restricted-syntax": 0,
+    "no-irregular-whitespace": 0,
+    "import/no-unresolved": 0,
+    "no-underscore-dangle": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "consistent-return": 1,
+    "react/jsx-one-expression-per-line": 0
+  }
 }
